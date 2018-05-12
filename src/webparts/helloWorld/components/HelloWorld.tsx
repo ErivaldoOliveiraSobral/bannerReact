@@ -2,11 +2,21 @@ import * as React from 'react';
 import styles from './HelloWorld.module.scss';
 import { IHelloWorldProps } from './IHelloWorldProps';
 import { escape } from '@microsoft/sp-lodash-subset';
+import Carousel from "nuka-carousel";
 
 export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
   public render(): React.ReactElement<IHelloWorldProps> {
     return (
-      <div className={ styles.helloWorld }>
+      <Carousel>
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide1" />
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide2" />
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide3" />
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide4" />
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide5" />
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide6" />
+      </Carousel>
+      
+      /*<div className={ styles.helloWorld }>
         <div className={ styles.container }>
           <div className={ styles.row }>
             <div className={ styles.column }>
@@ -19,7 +29,7 @@ export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
             </div>
           </div>
         </div>
-      </div>
+      </div>*/
     );
   }
 }
