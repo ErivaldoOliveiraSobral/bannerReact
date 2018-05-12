@@ -6,8 +6,20 @@ import Carousel from "nuka-carousel";
 
 export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
   public render(): React.ReactElement<IHelloWorldProps> {
+    
+    
+    const op= {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      infinite: true,
+      wrapAround: true,
+      autoplaySpeed: 100,
+    }
+
+
     return (
-      <Carousel>
+      <Carousel {...op}>
         <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide1" />
         <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide2" />
         <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide3" />
